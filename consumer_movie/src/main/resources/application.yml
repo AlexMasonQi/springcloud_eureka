@@ -1,0 +1,8 @@
+server:
+  port: 8473
+  servlet:
+      context-path: /consumer_movie
+logging:
+  config: classpath:logback.xml
+user:
+  userServicePath: http://localhost:8471/provider_user/provider/user/

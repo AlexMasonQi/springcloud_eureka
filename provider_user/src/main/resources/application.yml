@@ -1,0 +1,18 @@
+server:
+  port: 8471
+  servlet:
+    context-path: /provider_user
+logging:
+  config: classpath:logback.xml
+mybatis:
+  mapper-locations: classpath*:com/springcloud/mapper/*.xml
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8472/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+spring:
+  application:
+    name: microservice-provider-user
