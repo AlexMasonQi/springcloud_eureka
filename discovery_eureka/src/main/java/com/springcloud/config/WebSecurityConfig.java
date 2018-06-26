@@ -15,6 +15,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter
     @Override
     protected void configure(HttpSecurity http) throws Exception
     {
+        //disabled csrf to avoid register service failed
         http.csrf().disable().httpBasic();
         super.configure(http);
     }
