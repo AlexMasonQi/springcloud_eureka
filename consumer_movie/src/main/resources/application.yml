@@ -4,5 +4,15 @@ server:
       context-path: /consumer_movie
 logging:
   config: classpath:logback.xml
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://root:aabbcc@localhost:8472/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+spring:
+  application:
+    name: microservice-consumer-movie
 user:
   userServicePath: http://localhost:8471/provider_user/provider/user/

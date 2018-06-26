@@ -9,7 +9,7 @@ mybatis:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8472/eureka/
+      defaultZone: http://root:aabbcc@localhost:8472/eureka/
   instance:
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}

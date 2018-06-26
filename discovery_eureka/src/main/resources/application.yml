@@ -4,7 +4,9 @@ eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
+    healthcheck:
+      enabled: true
     service-url:
-      defaultZone: http://localhost:8472/eureka/
+      defaultZone: http://root:aabbcc@localhost:8472/eureka/
 logging:
   config: classpath:logback.xml

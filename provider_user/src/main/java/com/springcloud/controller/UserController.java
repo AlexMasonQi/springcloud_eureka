@@ -1,5 +1,7 @@
 package com.springcloud.controller;
 
+import com.netflix.appinfo.InstanceInfo;
+import com.netflix.discovery.EurekaClient;
 import com.springcloud.entity.ChatUser;
 import com.springcloud.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,9 +19,19 @@ public class UserController
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private EurekaClient discoveryClient;
+
     @GetMapping("/user/{id}")
     public ChatUser findUserById(@PathVariable Integer id)
     {
         return userService.findUserById(id);
+    }
+
+    @GetMapping("/instace-info")
+    public String serviceUrl()
+    {
+        InstanceInfo instance = discoveryClient.getNextServerFromEureka("MICROSERVICE-PROVIDER-USER", false);
+        return instance.getHomePageUrl();
     }
 }
