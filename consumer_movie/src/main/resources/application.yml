@@ -14,5 +14,3 @@ eureka:
 spring:
   application:
     name: microservice-consumer-movie
-user:
-  userServicePath: http://localhost:8471/provider_user/provider/user/
