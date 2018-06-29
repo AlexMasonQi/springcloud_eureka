@@ -1,0 +1,42 @@
+---
+spring:
+  application:
+    name: eureka_peer1
+  profiles:
+    active: peer1
+server:
+  port: 9060
+eureka:
+  instance:
+    hostname: peer1
+  client:
+    serviceUrl:
+      defaultZone: http://peer2:9061/eureka/
+---
+spring:
+  application:
+    name: eureka_peer2
+  profiles:
+    active: peer2
+server:
+  port: 9061
+eureka:
+  instance:
+    hostname: peer2
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:9060/eureka/
+---
+spring:
+  application:
+    name: eureka_peer3
+  profiles:
+    active: peer3
+server:
+  port: 9062
+eureka:
+  instance:
+    hostname: peer3
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:9060/eureka/,http://peer2:9061/eureka/

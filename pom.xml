@@ -10,6 +10,8 @@
         <module>discovery_eureka</module>
         <module>provider_user</module>
         <module>consumer_movie</module>
+        <module>consumer_movie_feign</module>
+        <module>eureka_peer</module>
     </modules>
     <packaging>pom</packaging>
 

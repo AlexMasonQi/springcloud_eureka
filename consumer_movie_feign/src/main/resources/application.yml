@@ -1,0 +1,33 @@
+server:
+  port: 8500
+  servlet:
+      context-path: /consumer_movie_feign
+logging:
+  config: classpath:logback.xml
+  level:
+    com.springcloud.maincloud.feign.MovieFeignClient2: DEBUG
+    com.springcloud.maincloud.feign.MovieFeignClient: DEBUG
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://root:aabbcc@localhost:8472/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+spring:
+  application:
+    name: microservice-consumer-movie_feign
+#ribbon:
+#  eureka:
+#    enabled: false
+#microservice-provider-user:
+#  ribbon:
+#    listOfServers: localhost:8476
+#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+#forbid the Hystrix timeout time
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: false

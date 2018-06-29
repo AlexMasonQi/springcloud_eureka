@@ -5,6 +5,8 @@ import com.springcloud.entity.ChatUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserService
 {
@@ -14,5 +16,10 @@ public class UserService
     public ChatUser findUserById(Integer id)
     {
         return userDao.selectUserById(id);
+    }
+
+    public List<ChatUser> selectAllUsers()
+    {
+        return userDao.selectAllUsers();
     }
 }

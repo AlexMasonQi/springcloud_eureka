@@ -24,4 +24,10 @@
         from alex_user
         where id=#{id}
     </select>
+
+    <select id="selectAllUsers" resultMap="userMap">
+        select
+        <include refid="baseColumns"/>
+        from alex_user
+    </select>
 </mapper>

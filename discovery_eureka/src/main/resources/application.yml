@@ -8,5 +8,9 @@ eureka:
       enabled: true
     service-url:
       defaultZone: http://root:aabbcc@localhost:8472/eureka/
+#  In product enviroment, DO NOT close the self-preservation
+#  server:
+#    enable-self-preservation: false
+#    eviction-interval-timer-in-ms: 10000
 logging:
   config: classpath:logback.xml

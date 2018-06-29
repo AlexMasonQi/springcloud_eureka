@@ -14,3 +14,10 @@ eureka:
 spring:
   application:
     name: microservice-consumer-movie
+#ribbon:
+#  eureka:
+#    enabled: false
+microservice-provider-user:
+  ribbon:
+#    listOfServers: localhost:8476
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
