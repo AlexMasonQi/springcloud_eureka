@@ -12,6 +12,8 @@
         <module>consumer_movie</module>
         <module>consumer_movie_feign</module>
         <module>eureka_peer</module>
+        <module>consumer_movie_ribbon_hystrix</module>
+        <module>consumer_movie_feign_hystrix</module>
     </modules>
     <packaging>pom</packaging>
 
