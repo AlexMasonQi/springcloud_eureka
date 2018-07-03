@@ -1,5 +1,5 @@
 server:
-  port: 8502
+  port: 8503
 logging:
   config: classpath:logback.xml
 #  level:
@@ -11,15 +11,12 @@ eureka:
       enabled: true
     serviceUrl:
       defaultZone: http://alex:becauseofyou7@47.104.84.122:9093/eureka/
-    registry-fetch-interval-seconds: 5
   instance:
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
 spring:
   application:
-    name: microservice-consumer-movie_feign_hystrix
-ribbon:
-  ServerListRefreshInterval: 5000
+    name: microservice-consumer-movie_hystrix_dashboard
 #ribbon:
 #  eureka:
 #    enabled: false

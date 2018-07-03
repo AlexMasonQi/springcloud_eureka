@@ -1,0 +1,40 @@
+server:
+  port: 8506
+spring:
+  application:
+    name: consumer_movie_turbine
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    service-url:
+      defaultZone: http://alex:becauseofyou7@47.104.84.122:9093/eureka/
+    registry-fetch-interval-seconds: 5
+  instance:
+    appname: consumer_movie_turbine
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+logging:
+  config: classpath:logback.xml
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
+feign:
+  hystrix:
+    enabled: true
+#turbine
+turbine:
+  aggregator:
+    cluster-config: default
+  app-config: microservice-consumer-movie_feign_hystrix
+  cluster-name-expression: new String("default")
+  combine-host-port: true
+  instanceUrlSuffix:
+    default: /hystrix.stream
+ribbon:
+  ServerListRefreshInterval: 5000
+

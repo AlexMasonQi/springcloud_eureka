@@ -14,6 +14,8 @@
         <module>eureka_peer</module>
         <module>consumer_movie_ribbon_hystrix</module>
         <module>consumer_movie_feign_hystrix</module>
+        <module>consumer_movie_hystrix_dashboard</module>
+        <module>consumer_movie_hystrix_turbine</module>
     </modules>
     <packaging>pom</packaging>
 
