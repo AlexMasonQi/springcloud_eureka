@@ -30,7 +30,7 @@ feign:
 turbine:
   aggregator:
     cluster-config: default
-  app-config: microservice-consumer-movie_feign_hystrix
+  app-config: microservice-consumer-movie_feign_hystrix,microservice-ribbon_hystrix
   cluster-name-expression: new String("default")
   combine-host-port: true
   instanceUrlSuffix:

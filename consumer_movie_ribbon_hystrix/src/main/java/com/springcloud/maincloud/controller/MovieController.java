@@ -27,7 +27,7 @@ public class MovieController
     public ChatUser getUserById(@PathVariable Integer id)
     {
         logger.info("Get user " + id + "successfully!");
-        return restTemplate.getForObject("http://microservice-provider-user/provider_user/user/" + id, ChatUser.class);
+        return restTemplate.getForObject("http://microservice-provider-user/user/" + id, ChatUser.class);
     }
 
     public ChatUser getUserByIdCallBack(Integer id)

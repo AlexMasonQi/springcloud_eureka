@@ -16,6 +16,8 @@
         <module>consumer_movie_feign_hystrix</module>
         <module>consumer_movie_hystrix_dashboard</module>
         <module>consumer_movie_hystrix_turbine</module>
+        <module>discovery-zuul-proxy</module>
+        <module>discovery-zuul-regexp</module>
     </modules>
     <packaging>pom</packaging>
 

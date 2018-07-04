@@ -1,0 +1,35 @@
+server:
+  port: 8479
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    service-url:
+      defaultZone: http://alex:becauseofyou7@47.104.84.122:9093/eureka/
+    registry-fetch-interval-seconds: 5
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+logging:
+  config: classpath:logback.xml
+spring:
+  application:
+    name: zuul-proxy
+ribbon:
+  ServerListRefreshInterval: 5000
+zuul:
+#  prefix: /api
+#  strip-prefix: false
+#  ignored-services: '*'
+  routes:
+    user-proxy:
+      path: /feign/**
+      serviceId: microservice-consumer-movie_feign_hystrix
+#      url: http://192.168.70.1:8502/
+hystrix:
+  command:
+    myusers-service:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 6000

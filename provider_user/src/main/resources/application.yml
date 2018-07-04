@@ -1,7 +1,5 @@
 server:
   port: 8471
-  servlet:
-    context-path: /provider_user
 logging:
   config: classpath:logback.xml
 mybatis:

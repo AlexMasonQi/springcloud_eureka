@@ -9,6 +9,6 @@ import org.springframework.cloud.openfeign.FeignClient;
 @FeignClient(name = "microservice-provider-user", configuration = FeignConfig.class, fallbackFactory = MovieFallback.class)
 public interface MovieFeignClient
 {
-    @RequestLine("GET /provider_user/user/{id}")
+    @RequestLine("GET /user/{id}")
     ChatUser getUserById(@Param("id") Integer id);
 }

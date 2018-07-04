@@ -1,7 +1,5 @@
 server:
   port: 8600
-  servlet:
-      context-path: /consumer_movie_hystrix
 logging:
   config: classpath:logback.xml
 eureka:
@@ -10,12 +8,13 @@ eureka:
       enabled: true
     serviceUrl:
       defaultZone: http://alex:becauseofyou7@47.104.84.122:9093/eureka/
+    registry-fetch-interval-seconds: 5
   instance:
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
 spring:
   application:
-    name: microservice-consumer-movie
+    name: microservice-ribbon_hystrix
 #ribbon:
 #  eureka:
 #    enabled: false
@@ -31,8 +30,5 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 5000
-management:
-  endpoints:
-    web:
-      exposure:
-        include: hystrix.stream
+ribbon:
+  ServerListRefreshInterval: 5000
