@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consumer_movie" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consumer_movie_feign" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consumer_movie_feign_hystrix" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consumer_movie_hystrix_dashboard" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consumer_movie_hystrix_turbine" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consumer_movie_ribbon_hystrix" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/discovery-zuul-proxy" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/discovery-zuul-regexp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/discovery_eureka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka_peer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider_user" charset="UTF-8" />
+  </component>
+</project>

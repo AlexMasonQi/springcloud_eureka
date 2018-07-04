@@ -30,11 +30,10 @@ ribbon:
 #set the Hystrix timeout time
 hystrix:
   command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 5000
+      default:
+        execution:
+          timeout:
+            enabled: false
 feign:
   hystrix:
     enabled: true

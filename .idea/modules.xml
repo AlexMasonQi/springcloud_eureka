@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/SpringCloud.iml" filepath="$PROJECT_DIR$/.idea/SpringCloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/consumer_movie/consumer_movie.iml" filepath="$PROJECT_DIR$/consumer_movie/consumer_movie.iml" />
+      <module fileurl="file://$PROJECT_DIR$/consumer_movie_feign/consumer_movie_feign.iml" filepath="$PROJECT_DIR$/consumer_movie_feign/consumer_movie_feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/consumer_movie_feign_hystrix/consumer_movie_feign_hystrix.iml" filepath="$PROJECT_DIR$/consumer_movie_feign_hystrix/consumer_movie_feign_hystrix.iml" />
+      <module fileurl="file://$PROJECT_DIR$/consumer_movie_hystrix_dashboard/consumer_movie_hystrix_dashboard.iml" filepath="$PROJECT_DIR$/consumer_movie_hystrix_dashboard/consumer_movie_hystrix_dashboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/consumer_movie_hystrix_turbine/consumer_movie_hystrix_turbine.iml" filepath="$PROJECT_DIR$/consumer_movie_hystrix_turbine/consumer_movie_hystrix_turbine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/consumer_movie_ribbon_hystrix/consumer_movie_ribbon_hystrix.iml" filepath="$PROJECT_DIR$/consumer_movie_ribbon_hystrix/consumer_movie_ribbon_hystrix.iml" />
+      <module fileurl="file://$PROJECT_DIR$/discovery-zuul-proxy/discovery-zuul-proxy.iml" filepath="$PROJECT_DIR$/discovery-zuul-proxy/discovery-zuul-proxy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/discovery-zuul-regexp/discovery-zuul-regexp.iml" filepath="$PROJECT_DIR$/discovery-zuul-regexp/discovery-zuul-regexp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/discovery_eureka/discovery_eureka.iml" filepath="$PROJECT_DIR$/discovery_eureka/discovery_eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka_peer/eureka_peer.iml" filepath="$PROJECT_DIR$/eureka_peer/eureka_peer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/provider_user/provider_user.iml" filepath="$PROJECT_DIR$/provider_user/provider_user.iml" />
+    </modules>
+  </component>
+</project>

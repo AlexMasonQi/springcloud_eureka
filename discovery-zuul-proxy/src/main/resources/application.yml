@@ -17,6 +17,8 @@ spring:
     name: zuul-proxy
 ribbon:
   ServerListRefreshInterval: 5000
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
 zuul:
 #  prefix: /api
 #  strip-prefix: false
@@ -28,8 +30,7 @@ zuul:
 #      url: http://192.168.70.1:8502/
 hystrix:
   command:
-    myusers-service:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 6000
+      default:
+        execution:
+          timeout:
+            enabled: false
