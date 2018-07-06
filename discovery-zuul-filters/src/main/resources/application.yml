@@ -1,8 +1,11 @@
+spring:
+  application:
+    name: zuul-filters
 server:
-  port: 8479
+  port: 8482
 eureka:
   client:
-    healthcheck:
+    healthCheck:
       enabled: true
     service-url:
       defaultZone: http://alex:becauseofyou7@47.104.84.122:9093/eureka/
@@ -12,30 +15,23 @@ eureka:
     instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
 logging:
   config: classpath:logback.xml
-spring:
-  application:
-    name: zuul-proxy
 ribbon:
   ServerListRefreshInterval: 5000
   ReadTimeout: 60000
   ConnectTimeout: 60000
 zuul:
-#  prefix: /api
-#  strip-prefix: false
-#  ignored-services: '*'
   routes:
     user-proxy:
       path: /feign/**
       serviceId: microservice-consumer-movie_feign_hystrix
-#      url: http://192.168.70.1:8502/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 hystrix:
   command:
       default:
         execution:
           timeout:
             enabled: false
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"

@@ -1,5 +1,5 @@
 server:
-  port: 8479
+  port: 8480
 eureka:
   client:
     healthcheck:
@@ -14,7 +14,7 @@ logging:
   config: classpath:logback.xml
 spring:
   application:
-    name: zuul-proxy
+    name: zuul-proxy-fallback
 ribbon:
   ServerListRefreshInterval: 5000
   ReadTimeout: 60000
@@ -25,8 +25,8 @@ zuul:
 #  ignored-services: '*'
   routes:
     user-proxy:
-      path: /feign/**
-      serviceId: microservice-consumer-movie_feign_hystrix
+      path: /myUser/**
+      serviceId: microservice-provider-user
 #      url: http://192.168.70.1:8502/
 hystrix:
   command:
